@@ -16,6 +16,31 @@ to rediscover. Source and tests remain the authority for implementation facts.
   product task must still choose the smallest suitable output structure.
 - Supersedes: None
 
+## D-0002 — Fixed voice, all-GitHub browser generation
+
+- Date: 2026-10-12; status: Accepted.
+- Decision: Reuse only GS Deutsche Bahn Durchsage, prepare conditioning offline,
+  host all runtime assets on GitHub and generate arbitrary visitor text locally.
+  Random excuses reuse matching pregenerated audio clips.
+- Consequence: The speech backbone/decoder still require efficient browser
+  qualification. Finite recordings alone cannot fulfill the goal.
+
+## D-0003 — DB-style independent parody interface
+
+- Date: 2026-10-12; status: Accepted.
+- Decision: Follow bahn.de's visual language and route form, with independent
+  start/destination/train inputs, editable excuse, random excuse and MP3 output.
+  Keep a visible independent-parody label.
+- Consequence: No official booking, login, payments or timetable features.
+
+## D-0004 — Private bootstrap and real-runtime completion
+
+- Date: 2026-10-12; status: Accepted.
+- Decision: Initialize GeorgeFejer91/Deutsche-bahn-ausreden privately on main.
+  Keep the app goal active until browser inference, voice quality, hosting and
+  MP3 generation pass their real gates.
+- Consequence: Pages eligibility is unverified. A push alone is not deployment.
+
 ## Record format
 
 For later decisions, add one compact entry with:

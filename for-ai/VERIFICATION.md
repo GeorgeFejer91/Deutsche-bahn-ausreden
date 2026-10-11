@@ -49,6 +49,29 @@ Run proportionate build, test, lint, type, runtime, visual, device, security,
 and compatibility checks for every affected boundary. Do not run an expensive
 or irrelevant full matrix for a documentation-only edit.
 
+Browser speech qualification requires:
+
+1. Preserve/verify the original profile hash; prepare reusable voice conditioning
+   offline and record derivative hashes and exact model/license provenance.
+2. Enforce full package below GitHub Pages' 1 GB limit and ordinary Git files
+   below 100 MiB. Verify actual browser requests to final GitHub asset URLs.
+3. Generate previously unseen German station/train/excuse text in a real browser.
+   Record browser/GPU, cold download, cached startup, peak memory, generation time
+   and output duration. Cached assets must still generate novel text.
+4. Verify no inference server, text/audio upload, external CDN, runtime cloning
+   encoder or ASR model. Only the fixed GS Deutsche Bahn Durchsage voice is used.
+5. Check random excuses use matching prerecorded text/audio; editing invalidates
+   that selection. Verify complete assembled playback and a decodable MP3.
+6. Listen to real German outputs for voice identity, words/digits and natural
+   joins. ASR assists but does not replace audition. Define phone support only
+   after real device testing; expose unsupported runtime failures honestly.
+7. Check rendered minimum/normal/large desktop, phone portrait/landscape, 320 CSS
+   px reflow, 200% zoom and text-spacing overrides. Review screenshots, focus,
+   full labels, bounds and Pretext/DOM parity. Concealed overflow is a failure.
+
+Add exact preparation/build/runtime commands when implemented. A UI build never
+qualifies browser speech generation or generated-audio quality.
+
 ## Gate 4: publication
 
 1. Review status and diff; preserve unrelated changes.
@@ -57,6 +80,9 @@ or irrelevant full matrix for a documentation-only edit.
 4. Create one coherent commit under normal repository policy.
 5. Push without force and without bypassing protection or secret scanning.
 6. Verify the remote commit and required CI/deployment for that exact SHA.
+
+The new repository is initially private. Preserve that visibility unless the
+user authorizes otherwise; verify private Pages eligibility before deployment.
 
 ## Handoff evidence
 

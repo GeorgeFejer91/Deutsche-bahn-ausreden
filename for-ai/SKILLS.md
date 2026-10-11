@@ -18,15 +18,19 @@ Higher-priority instructions and the current user request always win.
 | --- | --- | --- |
 | Any coding, refactor, fix, or code review | `ponytail` | Required when installed: reuse existing owners, prefer native/standard features, and implement the smallest complete change. If unavailable, disclose that and apply the YAGNI rules in `PROJECT.md`. |
 | Current or uncertain public facts, APIs, standards, libraries, or online research | `multi-source-web-search` | Conditional: open primary sources, run a blind-spot pass for nontrivial work, and cite the pages actually inspected. |
-| Architecture, ownership, contracts, authority, observability, or durable handoff design | `system-engineering` | Conditional when the task materially changes these surfaces. |
-| Large repository inventory, instruction audit, dependency pressure, or broad impact mapping | `rust-work-graph` | Conditional only when repository complexity justifies graph analysis. |
-| HTML/CSS or frontend UI generation | `uncodixfy` | Conditional for visible frontend code; preserve the product's chosen identity. |
+| Text-bearing HTML UI | `uncodixfy-pretext` | Required: read references/pretext.md and references/accordion-stretch.md, lock Pretext, measure real bounded labels and verify rendering. Load Ponytail first or follow its documented fallback. |
 
 ## Project-specific routes
 
-None yet. Add exact identifiers only after the project selects a stack or
-domain that genuinely needs them. Record required vs conditional status,
-nesting order, fallback behavior, and source revision for vendored skills.
+| Work | Exact skill / provenance | Policy |
+| --- | --- | --- |
+| Bootstrap and control plane | `for-ai`, GeorgeFejer91/for-ai-skill | Required. Reviewed canonical source revision fe996c8055f4e3f8e3369cf1f868fb99ebf9b35d supplied missing installed scripts/assets. |
+| Website development guidance | `sites:sites` | Relevant design/local-preview guidance. The explicit GitHub-only target overrides Sites hosting; create no separate hosted Site. |
+| Real browser QA | Installed browser automation and its documented API | Use bundled dependencies/current browser tools. Synthetic inference cannot qualify generated audio. |
+
+This is a static browser app. Desktop Tauri defaults do not authorize a desktop
+app, Secret Tunnel runtime bridge or inference backend. Rust/Tauri skills apply
+only if a later separately authorized task genuinely touches native behavior.
 
 ## Supply-chain rule
 
