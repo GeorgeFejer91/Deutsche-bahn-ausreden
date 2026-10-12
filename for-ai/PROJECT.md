@@ -109,6 +109,11 @@ Keep the original references and profile unchanged during asset preparation.
 - Repository: GeorgeFejer91/Deutsche-bahn-ausreden; private; main.
 - GitHub Pages is the target. The current plan rejected private Pages creation
   with HTTP422; do not change visibility without user authorization.
+- `tools/prepare-pages.mjs` stages the freshly built site into an isolated index
+  and prepares `gh-pages`, preserving every asset byte and recording its source
+  commit in `build-info.json`. This branch is generated deployment output, not
+  a second source tree. Main remains the source owner; Pages configuration and
+  final deployment qualification are separate actions.
 
 ## Current verified state
 

@@ -102,6 +102,13 @@ qualifies browser speech generation or generated-audio quality.
 5. Push without force and without bypassing protection or secret scanning.
 6. Verify the remote commit and required CI/deployment for that exact SHA.
 
+For prebuilt branch publication, run `pnpm prepare:pages` from a clean committed
+source checkout, inspect `.for-ai-local/pages-prepared.json`, then push
+`gh-pages` without force. The preparation verifies every staged byte and uses a
+separate Git index. Inspect the remote branch SHA, Pages deployment result and
+live `build-info.json`; require its `sourceCommit` to identify the tested main
+revision. A prepared or pushed branch alone is not live-site evidence.
+
 The new repository is initially private. Preserve that visibility unless the
 user authorizes otherwise; verify private Pages eligibility before deployment.
 

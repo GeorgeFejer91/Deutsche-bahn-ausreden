@@ -10,6 +10,7 @@
     "dev": "node tools/serve.mjs",
     "test": "node --test test/*.test.mjs",
     "prepare:model": "node tools/prepare-model.mjs",
+    "prepare:pages": "pnpm verify:assets && pnpm build && node tools/prepare-pages.mjs",
     "verify:assets": "node tools/verify-assets.mjs"
   },
   "dependencies": {
