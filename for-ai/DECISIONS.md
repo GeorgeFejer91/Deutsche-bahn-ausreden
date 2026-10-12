@@ -52,6 +52,18 @@ to rediscover. Source and tests remain the authority for implementation facts.
   omits the browser reference encoder and ASR. Compression and shorter-reference
   voice quality remain subject to the real-runtime/listening gate in D-0004.
 
+## D-0006 — Public GitHub Pages publication
+
+- Date: 2026-10-12; status: Accepted.
+- Context: The account plan rejected private Pages. The user explicitly replied
+  “ok make public” after the code, model, fixed voice and clip disclosure was explained.
+- Decision: Make the repository public and serve the verified prebuilt `gh-pages`
+  branch through GitHub Pages. Main remains the source owner.
+- Consequence: The publication boundary is now public. Deployment/file delivery
+  and live browser/voice quality remain separate qualification gates.
+- Supersedes: D-0004's private visibility for continued publication; its original
+  bootstrap history and runtime completion gate remain valid.
+
 ## Record format
 
 For later decisions, add one compact entry with:

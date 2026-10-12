@@ -2,8 +2,8 @@
 
 A browser-only German parody announcement generator using one fixed GS Deutsche Bahn Durchsage voice, custom routes and train numbers, and prerecorded random excuses.
 
-This repository was initialized on 2026-10-12. The website is under qualification;
-it has not been published to GitHub Pages.
+This repository was initialized on 2026-10-12. The website is public at
+https://georgefejer91.github.io/Deutsche-bahn-ausreden/ and remains under qualification.
 
 ## Active goal
 
@@ -33,8 +33,11 @@ played for the user. Voice identity, pronunciation and joins still need an
 audition assessment. The browser retains the tested 32-step setting; a 16-step
 speed experiment still needs a real-browser comparison. All five preset excuses
 and the closing phrase decode correctly and match their intended text in ASR.
-Random-clip playback in the final website, phone inference and deployment
-remain under qualification.
+Random-clip playback in the final website and phone inference remain under qualification.
+GitHub Pages deployment passed, and unauthenticated HTTPS requests verified all
+86 deployed product files against the prepared Git blobs, including model shards,
+voice assets, MP3s, fonts, JavaScript and WebAssembly. This verifies file delivery;
+live browser inference and final rendered checks still need a browser connection.
 UI reflow tests are not phone inference tests.
 
 Generated MP3s are standalone audio files. The page's player and download link
@@ -79,10 +82,11 @@ See [the complete notices](public/licenses/NOTICE.txt) and bundled agreements.
 The unmodified LGPL MP3 encoder is shipped as a separate replaceable ES module.
 This project does not relicense the voice, models or third-party libraries.
 
-GitHub rejected private-repository Pages creation under the current account plan
-(HTTP 422). Repository visibility has not been changed.
-The pushed implementation's GitHub Actions build could not start because an
-Actions budget prevents further use. No CI build steps ran; local checks passed.
+The user authorized public visibility on 2026-10-12. Pages now serves the prebuilt
+`gh-pages` branch at `/`. The initial private-repository Pages and CI budget
+restrictions are historical; the public deployment succeeded. The separate
+source-build workflow uses an explicit dependency-script policy: only the locked
+esbuild installer runs, and the optional protobufjs warning script is disabled.
 
 To prepare a prebuilt Pages branch after committing source changes, run
 `pnpm prepare:pages`, then `git push origin gh-pages`. This checks all asset

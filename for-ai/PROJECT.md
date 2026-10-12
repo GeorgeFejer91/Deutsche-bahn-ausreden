@@ -106,9 +106,9 @@ Keep the original references and profile unchanged during asset preparation.
   drives ordered reflow and the readable minimum-size notice.
 - Worker owns local model loading, inference, progress and cancellation.
 - Audio assembly/MP3 encoding run locally in the browser.
-- Repository: GeorgeFejer91/Deutsche-bahn-ausreden; private; main.
-- GitHub Pages is the target. The current plan rejected private Pages creation
-  with HTTP422; do not change visibility without user authorization.
+- Repository: GeorgeFejer91/Deutsche-bahn-ausreden; public; main.
+- The user authorized public visibility on 2026-10-12. GitHub Pages serves
+  `gh-pages` at `/`: https://georgefejer91.github.io/Deutsche-bahn-ausreden/.
 - `tools/prepare-pages.mjs` stages the freshly built site into an isolated index
   and prepares `gh-pages`, preserving every asset byte and recording its source
   commit in `build-info.json`. This branch is generated deployment output, not
@@ -132,16 +132,20 @@ Keep the original references and profile unchanged during asset preparation.
 - The completed sample's ASR recognizes all requested words and train-number
   meaning. All five preset excuses and closing decode and match their requested
   text in ASR. These checks do not establish identity or natural joins.
-- Listening, final random-clip playback, phone inference, cold-start memory and
-  final GitHub asset URLs remain unqualified.
+- Listening, live browser inference/random-clip playback, phone inference and
+  cold-start memory remain unqualified.
 - Pinned model files were SHA-256 verified, preserved byte for byte in Git and
-  pushed to the private repository. This is source-hosting evidence, not Pages
-  deployment or final browser asset-fetch qualification.
+  pushed to the repository. Pages deployment passed for the prepared branch;
+  unauthenticated HTTPS checks verified all 86 deployed product files byte for
+  byte against its Git blobs, with usable JavaScript/WebAssembly content types.
+  This proves file delivery, not browser shader execution or generated voice quality.
 - Desktop and narrow/landscape UI checks use rendered bounds and real Pretext;
   they do not prove speech quality or actual phone-device support.
-- The implementation is pushed privately. The GitHub Actions build did not
-  start because an Actions budget prevents further use; local checks passed,
-  but this is not CI qualification. Publishing remains a separate user choice.
+- Initial private-repository CI was blocked by an Actions budget. After public
+  authorization it ran and exposed unreviewed dependency scripts. The root
+  pnpm build policy explicitly allows the locked esbuild installer and disables
+  protobufjs's optional warning script. Source CI must pass independently of
+  the successful prebuilt Pages deployment.
 
 Git and runnable checks are the authority for branch, revision, and behavior.
 Do not turn this section into a second status ledger.

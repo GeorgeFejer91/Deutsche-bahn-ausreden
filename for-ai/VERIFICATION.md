@@ -109,8 +109,9 @@ separate Git index. Inspect the remote branch SHA, Pages deployment result and
 live `build-info.json`; require its `sourceCommit` to identify the tested main
 revision. A prepared or pushed branch alone is not live-site evidence.
 
-The new repository is initially private. Preserve that visibility unless the
-user authorizes otherwise; verify private Pages eligibility before deployment.
+The user authorized making this repository public on 2026-10-12. Publish intended
+project assets under that authorization and verify the deployed revision. The
+original private bootstrap and its Pages eligibility failure are historical.
 
 ## Handoff evidence
 
