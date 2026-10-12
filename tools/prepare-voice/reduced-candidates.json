@@ -1,0 +1,26 @@
+{
+  "4s": {
+    "startSeconds": 6,
+    "endSeconds": 10,
+    "refText": "Die Deutsche Bahn ist ein staatseigener Konzern.",
+    "originalCue": {
+      "file": "assets/audio/trains/ice-0815-marktversagen-bahnhofshalle-subtle.mp3",
+      "sha256": "6eb402461b18ac14bd4314d5aa69804aee21d4787cde2300dec5e70dde8ffd33",
+      "startSeconds": 21,
+      "endSeconds": 25,
+      "transcriptAuthority": "GermanySimulator/For-AI/AUDIO-TEXT-LIBRARY.js:459-460"
+    }
+  },
+  "9s": {
+    "startSeconds": 10,
+    "endSeconds": 19,
+    "refText": "Die Fahrgastinformation wurde noch nicht aktualisiert. Wir arbeiten daran. Seit geraumer Zeit.",
+    "originalCue": {
+      "file": "assets/audio/trains/ice-0815-stalingrad-bahnhofshalle-subtle.mp3",
+      "sha256": "f837e688737ab96b63936b4bb1d89fdb760923f07f506b73c016c778b49106fa",
+      "startSeconds": 28,
+      "endSeconds": 37,
+      "transcriptAuthority": "GermanySimulator/For-AI/AUDIO-TEXT-LIBRARY.js:463-464"
+    }
+  }
+}

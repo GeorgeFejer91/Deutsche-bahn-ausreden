@@ -38,10 +38,31 @@ Before implementation, name:
 
 ## Gate 2: focused change
 
-Run the narrowest real check for the change. Add the exact commands here when
-the project selects its stack. A syntax check proves syntax; a unit test proves
+Run the narrowest real check for the change. A syntax check proves syntax; a unit test proves
 its tested logic; neither proves UI, deployment, hardware, performance, safety,
 or scientific validity unless it directly observes that surface.
+
+```sh
+pnpm test
+pnpm verify:assets
+pnpm build
+pnpm dev
+```
+
+The Node checks cover preserved Unicode/leading train zeroes, complete grapheme
+paging and real MP3 frame encoding from PCM. They do not mock model inference.
+The build enforces the site/file size limits, cleans only its checked `dist/`
+path and copies all local ORT runtime variants plus the separate LAME module.
+The asset verifier checks every shard and reconstructed model hash. Git
+attributes preserve model bytes; compare the index/committed blobs with verified
+working files before publishing binary artifacts across Windows/Linux.
+Use the real browser UI to qualify inference, playback, download and geometry.
+Inspect both Pretext results and nested DOM bounds: labels can fit while groups
+overlap. Require `data-text-fit=fit` and `data-geometry-fit=fit`, screenshots,
+reachable controls and no document/textarea overflow at supported sizes.
+Custom word spacing uses matching DOM measurements; report that separately
+from Pretext parity. CSS viewport frames qualify reflow, not phone hardware or
+actual browser zoom. Record unavailable browser controls as NOT RUN.
 
 ## Gate 3: integrated readiness
 

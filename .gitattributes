@@ -5,6 +5,7 @@ public/models/** -text
 public/models/*.bin binary
 public/models/*.onnx binary
 public/models/tokenizer.json binary
+public/voice/** -text
 public/audio/*.mp3 binary
 
 # Verbatim upstream legal notices contain intentional whitespace.

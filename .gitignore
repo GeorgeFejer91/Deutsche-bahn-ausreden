@@ -1,5 +1,8 @@
 # Local agent/runtime artifacts
 .for-ai-local/
+node_modules/
+dist/
+tools/prepare-voice/target/
 
 # Local configuration and credentials
 .env

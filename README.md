@@ -2,8 +2,8 @@
 
 A browser-only German parody announcement generator using one fixed GS Deutsche Bahn Durchsage voice, custom routes and train numbers, and prerecorded random excuses.
 
-This repository was initialized on 2026-10-12. Product structure is
-intentionally not scaffolded until the first real deliverable selects it.
+This repository was initialized on 2026-10-12. The website is under qualification;
+it has not been published to GitHub Pages.
 
 ## Active goal
 
@@ -15,9 +15,72 @@ the browser, with the complete website/model/runtime hosted on GitHub.
 Follow [bahn.de](https://www.bahn.de/)'s visual style with a visible independent
 parody label. This is not an official Deutsche Bahn service.
 
-The saved 38.3-second voice reference was found and its hash verified. Efficient
-browser model export, voice quality, MP3 generation and deployment remain
-unqualified. The saved profile still requires the speech backbone and decoder.
+The interface follows DB's red/white/grey route-form style, with explicit parody
+labels, independent route fields, measured text paging, cancellation and MP3 output.
+It bundles its fonts, JavaScript, WebAssembly and model files locally.
+
+The INT4 inference package is 469,057,874 bytes, split into ordinary Git files
+at most 48 MiB. The complete site is about 557 MB. The saved reference remains
+unchanged; full, 4-second and 9-second conditioning derivatives are preserved.
+The current browser experiment uses the 4-second derivative of the same fixed
+profile. Its identity/intelligibility parity remains under qualification.
+
+A real Chrome 155 WebGPU run on Intel gen-12lp generated an 8.52-second novel
+German context segment in 507 seconds. Cached model startup took 20.6 seconds.
+This is slow on the tested integrated GPU; it is not a general speed claim.
+That run assembled a complete, decodable 14.664-second MP3, which was opened and
+played for the user. Voice identity, pronunciation and joins still need an
+audition assessment. The browser retains the tested 32-step setting; a 16-step
+speed experiment still needs a real-browser comparison. All five preset excuses
+and the closing phrase decode correctly and match their intended text in ASR.
+Random-clip playback in the final website, phone inference and deployment
+remain under qualification.
+UI reflow tests are not phone inference tests.
+
+Generated MP3s are standalone audio files. The page's player and download link
+use a local Blob URL; audio is not uploaded or automatically archived on GitHub.
+That URL lasts for the current page session. For a permanent embed, save the MP3
+under `public/audio/`, rebuild and publish, then use its hosted URL in an audio
+element on the destination page.
+
+## Local build
+
+Use Node 24 and the locked pnpm dependencies:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm test
+pnpm verify:assets
+pnpm build
+pnpm dev
+```
+
+Open http://127.0.0.1:4173/. The model files are included in `public/models/`;
+`pnpm prepare:model` is an optional build-time regeneration from pinned, verified
+upstream exports. Visitors never contact those upstream services. Offline voice
+preparation lives in `tools/prepare-voice/`; visitors do not need Rust or Secret Tunnel.
+
+WebGPU is required. Unsupported devices receive an explicit error. Supported
+viewport minimums are 320×440 CSS pixels, or 620×360 in landscape; larger/zoomed
+views reflow into ordered pages. Very small windows show a readable fit notice.
+Enlarged typography needs more space. Custom word spacing uses a matching DOM
+measurement sample because Pretext does not model it. Browser zoom and phone
+hardware remain separate qualification gates.
+
+## Model and library notices
+
+OmniVoice pretrained weights are CC-BY-NC, not Apache. The Higgs Audio 2 decoder
+has separate Boson and Meta agreements. Built with Higgs Materials licensed from
+Boson AI USA, Inc., Copyright Boson AI USA, Inc., All Rights Reserved and Meta
+Llama 3 licensed under the Meta Llama 3 Community License, Copyright Meta
+Platforms, Inc., All Right Reserved.
+
+See [the complete notices](public/licenses/NOTICE.txt) and bundled agreements.
+The unmodified LGPL MP3 encoder is shipped as a separate replaceable ES module.
+This project does not relicense the voice, models or third-party libraries.
+
+GitHub rejected private-repository Pages creation under the current account plan
+(HTTP 422). Repository visibility has not been changed.
 
 See [the project contract](for-ai/PROJECT.md) and
 [acceptance gates](for-ai/VERIFICATION.md).

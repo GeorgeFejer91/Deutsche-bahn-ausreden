@@ -24,3 +24,23 @@ for (const [role, asset] of Object.entries(manifest.assets)) {
 }
 if (total !== manifest.modelBytes || total >= 1_000_000_000) throw Error('Invalid complete model size.');
 console.log(`Verified every model shard and reconstructed asset: ${total} bytes`);
+
+const publicRoot = resolve('public');
+const profile = 'c90953352421463ebc9da45d8a916c47';
+const reference = '7f42fc8c38fd7d1115f40f62b03c7b6897a44ed15bc661fa1e23ae5c5094001c';
+const conditioningHashes = new Map();
+for (const [suffix, frames] of [['', 957], ['-4s', 100], ['-9s', 225]]) {
+  const bytes = await readFile(resolve(publicRoot, `voice/gs-deutsche-bahn-durchsage${suffix}.json`));
+  const voice = JSON.parse(bytes.toString('utf8'));
+  if (voice.profileId !== profile || voice.referenceSha256 !== reference || voice.sampleRate !== 24000 || voice.refAudioTokens.length !== 8 || voice.refAudioTokens.some(row => row.length !== frames || row.some(id => !Number.isInteger(id) || id < 0 || id > 1023))) throw Error(`Invalid fixed conditioning: ${suffix || 'full'}`);
+  conditioningHashes.set(frames, createHash('sha256').update(bytes).digest('hex'));
+}
+const catalogue = JSON.parse(await readFile(resolve(publicRoot, 'audio/excuses.json'), 'utf8'));
+const clips = [...catalogue.excuses, catalogue.closing];
+if (catalogue.profileId !== profile || catalogue.referenceSha256 !== reference || catalogue.excuses.length !== 5 || new Set(clips.map(clip => clip.id)).size !== 6) throw Error('Invalid fixed audio catalogue.');
+for (const clip of clips) {
+  if (!/^(excuse-0[1-5]|closing)$/.test(clip.id) || clip.url !== `audio/${clip.id}.mp3` || !clip.text?.trim()) throw Error('Invalid text/audio mapping.');
+  const bytes = await readFile(resolve(publicRoot, clip.url));
+  if (bytes.length !== clip.bytes || createHash('sha256').update(bytes).digest('hex') !== clip.sha256 || conditioningHashes.get(clip.generation.referenceFrames) !== clip.generation.conditioningSha256) throw Error(`Fixed clip checksum/provenance failed: ${clip.id}`);
+}
+console.log('Verified fixed conditioning and all six text/audio mappings and MP3 checksums.');

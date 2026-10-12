@@ -40,7 +40,8 @@ does not fulfill the goal. No voice uploads, runtime cloning or voice selector.
 - The saved profile contains WAV audio and metadata, not browser-ready voice
   tokens. Its saved reference_text is empty. A local German ASR pass produced a
   transcript; transcription is not evidence of generated voice quality.
-- Generated speech has not been auditioned or qualified for this website.
+- A complete browser sample was opened and played for the user; a listening
+  assessment of identity, pronunciation and joins remains pending.
 
 Prepare conditioning once offline so visitors do not download the reference
 audio encoder or speech-recognition model. Compare any shorter reference and
@@ -83,21 +84,31 @@ Keep the original references and profile unchanged during asset preparation.
 
 ## Product/control-plane boundary
 
-- Product source and deliverables: outside `for-ai/`; exact roots are
-  **Undecided until the first deliverable selects them**.
+- Product source: `src/`; static assets: `public/`; build/preparation: `tools/`;
+  focused checks: `test/`; generated website: ignored `dist/`.
 - Agent orchestration and durable project memory: `for-ai/`.
 - Local generated diagnostics and scratch evidence: `.for-ai-local/` (ignored).
 
 ## Architecture and ownership
 
-- Target: static HTML, small JavaScript/TypeScript frontend and a speech worker.
-  Framework and browser inference implementation remain Undecided.
+- Target: static HTML, CSS and a small ES module frontend, built with esbuild.
+- `src/app.js` owns form state, measured paging, worker job ownership and MP3 output.
+- `src/speech-worker.js` serializes jobs; `src/speech-engine.js` owns verified
+  same-origin model loading, fixed conditioning and local WebGPU inference.
+- `src/speech/algorithm.ts` adapts the MIT OmniVoiceWeb CFG sampling algorithm.
+- `src/audio.js` assembles PCM segments and uses a separate LGPL LAME module.
+- `public/models/manifest.json` owns exact graph/weight provenance and shard hashes.
+- The browser package excludes reference encoding and ASR. Offline native
+  preparation preserves the source and records full/cropped conditioning hashes.
 - CSS Grid/Flex owns geometry; locked Pretext measures bounded text.
+- Custom word spacing falls back to a typography-matched DOM sample; that mode
+  is browser measured and carries no Pretext accuracy claim. Typography demand
+  drives ordered reflow and the readable minimum-size notice.
 - Worker owns local model loading, inference, progress and cancellation.
 - Audio assembly/MP3 encoding run locally in the browser.
 - Repository: GeorgeFejer91/Deutsche-bahn-ausreden; private; main.
-- GitHub Pages is the target. Private-repository deployment eligibility and
-  the final efficient model package remain unverified.
+- GitHub Pages is the target. The current plan rejected private Pages creation
+  with HTTP422; do not change visibility without user authorization.
 
 ## Current verified state
 
@@ -105,9 +116,24 @@ Keep the original references and profile unchanged during asset preparation.
 - AI control plane created and mechanically checked.
 - Saved voice profile/reference hash and native model sizes were inspected.
 - Local German ASR transcribed the complete 38.3-second reference.
-- No product implementation has been scaffolded.
-- Browser inference, voice audition, MP3 generation and Pages deployment have
-  not passed their real runtime gates.
+- DB-style product UI, a 469,057,874-byte INT4 model mirror, local runtimes/fonts,
+  fixed conditioning and genuine browser MP3 encoding are implemented.
+- A real Chrome155/Intel gen-12lp run generated a novel German context segment
+  (8.52s audio,507s generation;20.6s cached startup). Full-reference generation
+  was cancelled after observing slow iteration; cancellation was verified.
+- That 32-step run assembled, downloaded and played a complete 14.664s MP3.
+  The browser retains that 32-step setting. A 16-step speed experiment with stage
+  timings remains unqualified.
+- The completed sample's ASR recognizes all requested words and train-number
+  meaning. All five preset excuses and closing decode and match their requested
+  text in ASR. These checks do not establish identity or natural joins.
+- Listening, final random-clip playback, phone inference, cold-start memory and
+  final GitHub asset URLs remain unqualified.
+- Pinned model files were SHA-256 verified, preserved byte for byte in Git and
+  pushed to the private repository. This is source-hosting evidence, not Pages
+  deployment or final browser asset-fetch qualification.
+- Desktop and narrow/landscape UI checks use rendered bounds and real Pretext;
+  they do not prove speech quality or actual phone-device support.
 
 Git and runnable checks are the authority for branch, revision, and behavior.
 Do not turn this section into a second status ledger.

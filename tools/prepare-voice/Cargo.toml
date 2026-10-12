@@ -1,0 +1,16 @@
+[package]
+name = "prepare-fixed-voice"
+version = "0.1.0"
+edition = "2021"
+publish = false
+default-run = "prepare-fixed-voice"
+
+[dependencies]
+omnivoice-infer = { git = "https://github.com/FerrisMind/omnivoice-rs", rev = "4c7b088294fd6f3a5fb9e3b1dfd3a77bc12f105b", default-features = false }
+serde_json = "1.0"
+sha2 = "0.10"
+safetensors = "=0.7.0"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"

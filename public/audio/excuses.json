@@ -1,0 +1,369 @@
+{
+  "excuses": [
+    {
+      "id": "excuse-01",
+      "text": "Der Zugführer hat die Verspätung versehentlich als pünktlich bestätigt.",
+      "url": "audio/excuse-01.mp3",
+      "sha256": "7a5fac531aba2e46eab549ab0667f206341439614d40b013791c95d0140d646e",
+      "wavSha256": "14d8939d19644ffd2b20897d47f898f223fb998527368ca70b10cc2ec0a73c0a",
+      "durationSeconds": 6.51,
+      "bytes": 79245,
+      "generation": {
+        "id": "excuse-01",
+        "method": "native infer-batch with complete reference",
+        "seed": 20261012,
+        "positionTemperature": 5,
+        "numStep": 32,
+        "referenceFrames": 957,
+        "conditioningSha256": "b0a4320cf6680f67255db11e948a5da8e6127fc3d95d8b1d757ce0314997aaa9",
+        "alreadyCompleted": true
+      }
+    },
+    {
+      "id": "excuse-02",
+      "text": "Ein Eichhörnchen hat die Oberleitung für eine sehr lange Nuss gehalten.",
+      "url": "audio/excuse-02.mp3",
+      "sha256": "06424d4235f02f2a64cc964d4473c8b0e0dd6f5152805e5da5cc961fd382054f",
+      "wavSha256": "727a57d73105a7c6f8fb71611680ea3684f41a7c35804aa72c39e49c8e0478a0",
+      "durationSeconds": 5.95,
+      "bytes": 72333,
+      "generation": {
+        "id": "excuse-02",
+        "method": "native infer-batch live CUDA path with explicit 4s saved-reference derivative",
+        "seed": 20261012,
+        "positionTemperature": 5,
+        "classTemperature": 0,
+        "guidanceScale": 2,
+        "tShift": 0.1,
+        "layerPenaltyFactor": 5,
+        "numStep": 32,
+        "referenceFrames": 100,
+        "conditioningSeconds": 4,
+        "conditioningSha256": "06a12ae8736b2342d08cb3a9512d0dcb3d2d2a3cefe5bba52383cf078d650301",
+        "derivedWavSha256": "06c33f0e3233976280acfcd0c8338375d22d21a9a9e8e4874680e85f8ac16dfd",
+        "derivedPcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+        "conditioningSource": {
+          "endSeconds": 10.0,
+          "originalCue": {
+            "endSeconds": 25,
+            "file": "assets/audio/trains/ice-0815-marktversagen-bahnhofshalle-subtle.mp3",
+            "sha256": "6eb402461b18ac14bd4314d5aa69804aee21d4787cde2300dec5e70dde8ffd33",
+            "startSeconds": 21,
+            "transcriptAuthority": "GermanySimulator/For-AI/AUDIO-TEXT-LIBRARY.js:459-460"
+          },
+          "pcmFormat": "IEEE754-f32 little endian, mono, 24000 Hz; decoded saved-reference samples before RMS normalization",
+          "pcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+          "qualification": "NOT RUN: voice identity, intelligibility and efficiency parity require comparison with the full reference",
+          "sampleCount": 96000,
+          "sourceReferenceSeconds": 38.3,
+          "sourceReferenceSha256": "7f42fc8c38fd7d1115f40f62b03c7b6897a44ed15bc661fa1e23ae5c5094001c",
+          "startSeconds": 6.0
+        },
+        "croppedVoiceParity": "PENDING: crop voice identity parity has not been established by listening",
+        "stages": [
+          {
+            "name": "stage_materialize",
+            "seconds": 4.04443
+          },
+          {
+            "name": "stage_frontend_build",
+            "seconds": 7.000000000000001E-05
+          },
+          {
+            "name": "stage0_generate",
+            "seconds": 8.2354
+          },
+          {
+            "name": "stage1_decode",
+            "seconds": 2.58888
+          }
+        ]
+      }
+    },
+    {
+      "id": "excuse-03",
+      "text": "Unser Anschlusszug wartet noch auf seinen Anschlusszug.",
+      "url": "audio/excuse-03.mp3",
+      "sha256": "320998bda05a4ef933c1856c633bd9a839a1cef7080effe6804fdb8a449123e1",
+      "wavSha256": "e18324d53751967c320fdbca1829b250124fbdc6260b75170d17fbb629bc2501",
+      "durationSeconds": 4.73,
+      "bytes": 57933,
+      "generation": {
+        "id": "excuse-03",
+        "method": "native infer-batch live CUDA path with explicit 4s saved-reference derivative",
+        "seed": 20261012,
+        "positionTemperature": 5,
+        "classTemperature": 0,
+        "guidanceScale": 2,
+        "tShift": 0.1,
+        "layerPenaltyFactor": 5,
+        "numStep": 32,
+        "referenceFrames": 100,
+        "conditioningSeconds": 4,
+        "conditioningSha256": "06a12ae8736b2342d08cb3a9512d0dcb3d2d2a3cefe5bba52383cf078d650301",
+        "derivedWavSha256": "06c33f0e3233976280acfcd0c8338375d22d21a9a9e8e4874680e85f8ac16dfd",
+        "derivedPcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+        "conditioningSource": {
+          "endSeconds": 10.0,
+          "originalCue": {
+            "endSeconds": 25,
+            "file": "assets/audio/trains/ice-0815-marktversagen-bahnhofshalle-subtle.mp3",
+            "sha256": "6eb402461b18ac14bd4314d5aa69804aee21d4787cde2300dec5e70dde8ffd33",
+            "startSeconds": 21,
+            "transcriptAuthority": "GermanySimulator/For-AI/AUDIO-TEXT-LIBRARY.js:459-460"
+          },
+          "pcmFormat": "IEEE754-f32 little endian, mono, 24000 Hz; decoded saved-reference samples before RMS normalization",
+          "pcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+          "qualification": "NOT RUN: voice identity, intelligibility and efficiency parity require comparison with the full reference",
+          "sampleCount": 96000,
+          "sourceReferenceSeconds": 38.3,
+          "sourceReferenceSha256": "7f42fc8c38fd7d1115f40f62b03c7b6897a44ed15bc661fa1e23ae5c5094001c",
+          "startSeconds": 6.0
+        },
+        "croppedVoiceParity": "PENDING: crop voice identity parity has not been established by listening",
+        "stages": [
+          {
+            "name": "stage_materialize",
+            "seconds": 2.7011399999999997
+          },
+          {
+            "name": "stage_frontend_build",
+            "seconds": 1E-05
+          },
+          {
+            "name": "stage0_generate",
+            "seconds": 4.55154
+          },
+          {
+            "name": "stage1_decode",
+            "seconds": 2.12743
+          }
+        ]
+      }
+    },
+    {
+      "id": "excuse-04",
+      "text": "Die Weiche muss sich erst entscheiden, wohin sie eigentlich möchte.",
+      "url": "audio/excuse-04.mp3",
+      "sha256": "f244f8a1d99fe13e7e62fbc951ac3552a904f2991a566516d9b72331e7eedf80",
+      "wavSha256": "4f4799979b271af3b6b11ec646d85b758777361a5ca3b9efa7107ea7b76e2652",
+      "durationSeconds": 5.02,
+      "bytes": 61389,
+      "generation": {
+        "id": "excuse-04",
+        "method": "native infer-batch live CUDA path with explicit 4s saved-reference derivative",
+        "seed": 20261012,
+        "positionTemperature": 5,
+        "classTemperature": 0,
+        "guidanceScale": 2,
+        "tShift": 0.1,
+        "layerPenaltyFactor": 5,
+        "numStep": 32,
+        "referenceFrames": 100,
+        "conditioningSeconds": 4,
+        "conditioningSha256": "06a12ae8736b2342d08cb3a9512d0dcb3d2d2a3cefe5bba52383cf078d650301",
+        "derivedWavSha256": "06c33f0e3233976280acfcd0c8338375d22d21a9a9e8e4874680e85f8ac16dfd",
+        "derivedPcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+        "conditioningSource": {
+          "endSeconds": 10.0,
+          "originalCue": {
+            "endSeconds": 25,
+            "file": "assets/audio/trains/ice-0815-marktversagen-bahnhofshalle-subtle.mp3",
+            "sha256": "6eb402461b18ac14bd4314d5aa69804aee21d4787cde2300dec5e70dde8ffd33",
+            "startSeconds": 21,
+            "transcriptAuthority": "GermanySimulator/For-AI/AUDIO-TEXT-LIBRARY.js:459-460"
+          },
+          "pcmFormat": "IEEE754-f32 little endian, mono, 24000 Hz; decoded saved-reference samples before RMS normalization",
+          "pcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+          "qualification": "NOT RUN: voice identity, intelligibility and efficiency parity require comparison with the full reference",
+          "sampleCount": 96000,
+          "sourceReferenceSeconds": 38.3,
+          "sourceReferenceSha256": "7f42fc8c38fd7d1115f40f62b03c7b6897a44ed15bc661fa1e23ae5c5094001c",
+          "startSeconds": 6.0
+        },
+        "croppedVoiceParity": "PENDING: crop voice identity parity has not been established by listening",
+        "stages": [
+          {
+            "name": "stage_materialize",
+            "seconds": 2.55273
+          },
+          {
+            "name": "stage_frontend_build",
+            "seconds": 1E-05
+          },
+          {
+            "name": "stage0_generate",
+            "seconds": 4.66257
+          },
+          {
+            "name": "stage1_decode",
+            "seconds": 2.20612
+          }
+        ]
+      }
+    },
+    {
+      "id": "excuse-05",
+      "text": "Der Fahrplan befindet sich noch in der Abstimmung mit dem Kalender.",
+      "url": "audio/excuse-05.mp3",
+      "sha256": "9513c1323e961d7db606cfbe86c78f53f270b6f9d1044bfa241113577681d5b3",
+      "wavSha256": "9702f51f138ca7c076ec7c6ca58139847ef47678ec79c9a83b0bf70dc3c2ab1d",
+      "durationSeconds": 5.68,
+      "bytes": 69165,
+      "generation": {
+        "id": "excuse-05",
+        "method": "native infer-batch live CUDA path with explicit 4s saved-reference derivative",
+        "seed": 20261012,
+        "positionTemperature": 5,
+        "classTemperature": 0,
+        "guidanceScale": 2,
+        "tShift": 0.1,
+        "layerPenaltyFactor": 5,
+        "numStep": 32,
+        "referenceFrames": 100,
+        "conditioningSeconds": 4,
+        "conditioningSha256": "06a12ae8736b2342d08cb3a9512d0dcb3d2d2a3cefe5bba52383cf078d650301",
+        "derivedWavSha256": "06c33f0e3233976280acfcd0c8338375d22d21a9a9e8e4874680e85f8ac16dfd",
+        "derivedPcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+        "conditioningSource": {
+          "endSeconds": 10.0,
+          "originalCue": {
+            "endSeconds": 25,
+            "file": "assets/audio/trains/ice-0815-marktversagen-bahnhofshalle-subtle.mp3",
+            "sha256": "6eb402461b18ac14bd4314d5aa69804aee21d4787cde2300dec5e70dde8ffd33",
+            "startSeconds": 21,
+            "transcriptAuthority": "GermanySimulator/For-AI/AUDIO-TEXT-LIBRARY.js:459-460"
+          },
+          "pcmFormat": "IEEE754-f32 little endian, mono, 24000 Hz; decoded saved-reference samples before RMS normalization",
+          "pcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+          "qualification": "NOT RUN: voice identity, intelligibility and efficiency parity require comparison with the full reference",
+          "sampleCount": 96000,
+          "sourceReferenceSeconds": 38.3,
+          "sourceReferenceSha256": "7f42fc8c38fd7d1115f40f62b03c7b6897a44ed15bc661fa1e23ae5c5094001c",
+          "startSeconds": 6.0
+        },
+        "croppedVoiceParity": "PENDING: crop voice identity parity has not been established by listening",
+        "stages": [
+          {
+            "name": "stage_materialize",
+            "seconds": 2.5631999999999997
+          },
+          {
+            "name": "stage_frontend_build",
+            "seconds": 1E-05
+          },
+          {
+            "name": "stage0_generate",
+            "seconds": 4.39941
+          },
+          {
+            "name": "stage1_decode",
+            "seconds": 2.30544
+          }
+        ]
+      }
+    }
+  ],
+  "closing": {
+    "id": "closing",
+    "text": "Wir bitten um Ihr Verständnis.",
+    "url": "audio/closing.mp3",
+    "sha256": "2eea95b52ee2cbd08d284b5d9de5291d23c41b0b32b594130e7e6baec33dadfe",
+    "wavSha256": "35987b9059b856d9383f69627c1667149a371413d295babf8ab0881322fede5f",
+    "durationSeconds": 2.64,
+    "bytes": 32589,
+    "generation": {
+      "id": "closing",
+      "method": "native infer-batch live CUDA path with explicit 4s saved-reference derivative",
+      "seed": 20261012,
+      "positionTemperature": 5,
+      "classTemperature": 0,
+      "guidanceScale": 2,
+      "tShift": 0.1,
+      "layerPenaltyFactor": 5,
+      "numStep": 32,
+      "referenceFrames": 100,
+      "conditioningSeconds": 4,
+      "conditioningSha256": "06a12ae8736b2342d08cb3a9512d0dcb3d2d2a3cefe5bba52383cf078d650301",
+      "derivedWavSha256": "06c33f0e3233976280acfcd0c8338375d22d21a9a9e8e4874680e85f8ac16dfd",
+      "derivedPcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+      "conditioningSource": {
+        "endSeconds": 10.0,
+        "originalCue": {
+          "endSeconds": 25,
+          "file": "assets/audio/trains/ice-0815-marktversagen-bahnhofshalle-subtle.mp3",
+          "sha256": "6eb402461b18ac14bd4314d5aa69804aee21d4787cde2300dec5e70dde8ffd33",
+          "startSeconds": 21,
+          "transcriptAuthority": "GermanySimulator/For-AI/AUDIO-TEXT-LIBRARY.js:459-460"
+        },
+        "pcmFormat": "IEEE754-f32 little endian, mono, 24000 Hz; decoded saved-reference samples before RMS normalization",
+        "pcmSha256": "768c8e3c8c913f3fb2dbf4ebd05a79600f79183a676afb743717ba9bcaf38371",
+        "qualification": "NOT RUN: voice identity, intelligibility and efficiency parity require comparison with the full reference",
+        "sampleCount": 96000,
+        "sourceReferenceSeconds": 38.3,
+        "sourceReferenceSha256": "7f42fc8c38fd7d1115f40f62b03c7b6897a44ed15bc661fa1e23ae5c5094001c",
+        "startSeconds": 6.0
+      },
+      "croppedVoiceParity": "PENDING: crop voice identity parity has not been established by listening",
+      "stages": [
+        {
+          "name": "stage_materialize",
+          "seconds": 2.98547
+        },
+        {
+          "name": "stage_frontend_build",
+          "seconds": 1E-05
+        },
+        {
+          "name": "stage0_generate",
+          "seconds": 3.5139299999999998
+        },
+        {
+          "name": "stage1_decode",
+          "seconds": 0.87207
+        }
+      ]
+    }
+  },
+  "voice": "GS Deutsche Bahn Durchsage",
+  "profileId": "c90953352421463ebc9da45d8a916c47",
+  "referenceSha256": "7f42fc8c38fd7d1115f40f62b03c7b6897a44ed15bc661fa1e23ae5c5094001c",
+  "sampleRate": 24000,
+  "provenance": {
+    "nativeBinarySha256": "d0f39af9d5b74e114c95e01dd30b43b78b8c9ac0735ec613c716d079095ff17b",
+    "nativeLibraryRevision": "4c7b088294fd6f3a5fb9e3b1dfd3a77bc12f105b",
+    "nativePatchHashes": {
+      "cuda": "06e70947845a9fd56bf869d36ff4bf02131e11e789ba753e069f4e33ebf328e1",
+      "longPrompt": "de7a82a6a7b1ae5ddb9f2762008b95aa33984a35bf86f9615ba2588606262289",
+      "asr": "5549334ce21d513755566b0030712648e8b1475e5d94e5a965fa1193cca185cf",
+      "mixed": "c5ba065380a16bb02c4b0c4caae6e79a84385ee56d0c022ce40ea0e5605c5559"
+    },
+    "modelRepository": "k2-fsa/OmniVoice",
+    "modelRevision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+    "modelSha256": "730839316de585f4c8298ec0e1712efc10fb19c6fa4e36eb741cb8d51ebcf6aa",
+    "audioTokenizerSha256": "fe7c5e8785e0a05833e1bfc3e002ec7f55af21e306b2e7154a448c1f54ccfb0d",
+    "ffmpegSha256": "1403b8a8a70054f1b8659e3481156e12b3cdb9d99ddc3c2a33b556e50db1e039",
+    "generatorDevice": "CUDA 0 / FP16; audio codec CPU / FP32",
+    "numStep": 32,
+    "preprocessPrompt": false,
+    "postprocessOutput": true,
+    "generationSeconds": null,
+    "initialBatchAttempt": {
+      "stopReason": "Intentional priority change: prepare reusable fixed conditioning before remaining bank clips",
+      "stoppedUtc": "2026-10-11T23:55:10.0465663Z",
+      "completedIds": [
+        "excuse-01"
+      ],
+      "firstClipDurationSeconds": 6.51,
+      "firstClipBytes": 79245,
+      "firstClipSha256": "7a5fac531aba2e46eab549ab0667f206341439614d40b013791c95d0140d646e",
+      "firstMaterializeSeconds": 290.00415,
+      "firstGenerateSeconds": 270.98247,
+      "firstDecodeSeconds": 7.6695,
+      "secondMaterializeSeconds": 114.11782
+    },
+    "mp3Encoding": "libmp3lame, 96 kbps, 24 kHz, mono",
+    "decodability": "VERIFIED: all MP3s decoded to nonempty 24 kHz mono PCM with FFmpeg",
+    "listening": "NOT RUN: no human or audio-input audition; ASR does not qualify voice identity"
+  }
+}
