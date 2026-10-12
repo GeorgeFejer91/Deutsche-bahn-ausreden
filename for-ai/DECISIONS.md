@@ -41,6 +41,17 @@ to rediscover. Source and tests remain the authority for implementation facts.
   MP3 generation pass their real gates.
 - Consequence: Pages eligibility is unverified. A push alone is not deployment.
 
+## D-0005 — Verified static INT4 model mirror
+
+- Date: 2026-10-12; status: Accepted.
+- Decision: Mirror the pinned INT4 embedding/backbone/heads exports and FP32
+  audio decoder as verified ordinary Git files, with shards at most 48 MiB.
+  Preserve their bytes with Git attributes and record original and shard hashes
+  in the model manifest. Runtime loading uses only the website's own origin.
+- Consequence: The model package is 469,057,874 bytes. Offline fixed conditioning
+  omits the browser reference encoder and ASR. Compression and shorter-reference
+  voice quality remain subject to the real-runtime/listening gate in D-0004.
+
 ## Record format
 
 For later decisions, add one compact entry with:

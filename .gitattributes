@@ -1,1 +1,11 @@
 * text=auto eol=lf
+
+# Preserve pinned model bytes across Windows/Linux checkouts.
+public/models/** -text
+public/models/*.bin binary
+public/models/*.onnx binary
+public/models/tokenizer.json binary
+public/audio/*.mp3 binary
+
+# Verbatim upstream legal notices contain intentional whitespace.
+public/licenses/* -whitespace
