@@ -134,6 +134,9 @@ Keep the original references and profile unchanged during asset preparation.
   deployment or final browser asset-fetch qualification.
 - Desktop and narrow/landscape UI checks use rendered bounds and real Pretext;
   they do not prove speech quality or actual phone-device support.
+- The implementation is pushed privately. The GitHub Actions build did not
+  start because an Actions budget prevents further use; local checks passed,
+  but this is not CI qualification. Publishing remains a separate user choice.
 
 Git and runnable checks are the authority for branch, revision, and behavior.
 Do not turn this section into a second status ledger.

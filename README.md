@@ -81,6 +81,8 @@ This project does not relicense the voice, models or third-party libraries.
 
 GitHub rejected private-repository Pages creation under the current account plan
 (HTTP 422). Repository visibility has not been changed.
+The pushed implementation's GitHub Actions build could not start because an
+Actions budget prevents further use. No CI build steps ran; local checks passed.
 
 See [the project contract](for-ai/PROJECT.md) and
 [acceptance gates](for-ai/VERIFICATION.md).
