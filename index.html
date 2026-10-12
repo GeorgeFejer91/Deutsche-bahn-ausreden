@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Fiktive Bahndurchsagen mit eigenen Stationen, Zugnummern und Ausreden. Unabhängige Parodie.">
+  <title>Deutsche Bahn Ausreden · Parodie</title>
+  <link rel="stylesheet" href="./app.css">
+  <script type="importmap">{"imports":{"@breezystack/lamejs":"./runtime/lamejs.js"}}</script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Deutsche Bahn Ausreden, Startseite">
+        <span class="brand-mark" aria-hidden="true">DB<span>*</span></span>
+        <span class="brand-name" data-measure="multi">Deutsche Bahn Ausreden</span>
+      </a>
+      <span class="parody" data-measure="multi">Unabhängige Parodie</span>
+    </div>
+  </header>
+  <main>
+    <div class="page-heading">
+      <h1 data-measure="multi">Durchsage erstellen</h1>
+      <p class="instructions" data-measure="multi">Ihre Verbindung, Ihre Ausrede. Eine fiktive Durchsage als MP3.</p>
+    </div>
+    <form id="generator" novalidate>
+      <div class="editor">
+        <fieldset id="route-fields">
+          <legend class="sr-only">Verbindung</legend>
+          <label class="field" for="start">
+            <span data-measure="line">Startbahnhof</span>
+            <input id="start" name="start" type="text" placeholder="z. B. Berlin Hbf" maxlength="80" autocomplete="off" required>
+          </label>
+          <label class="field" for="destination">
+            <span data-measure="line">Zielbahnhof</span>
+            <input id="destination" name="destination" type="text" placeholder="z. B. Hamburg Hbf" maxlength="80" autocomplete="off" required>
+          </label>
+          <label class="field" for="train">
+            <span data-measure="line">Zugnummer</span>
+            <input id="train" name="train" type="text" placeholder="z. B. ICE 0815" maxlength="20" autocomplete="off" required>
+          </label>
+        </fieldset>
+        <section id="excuse-fields" aria-labelledby="excuse-label">
+          <div class="excuse-heading">
+            <label id="excuse-label" for="excuse" data-measure="line">Ausrede</label>
+            <button id="random" type="button" class="button secondary">
+              <span data-measure="line">Zufällige Ausrede</span>
+            </button>
+          </div>
+          <textarea id="excuse" name="excuse" rows="4" placeholder="Warum kommt dieser Zug zu spät?" aria-describedby="excuse-help" required></textarea>
+          <div id="text-pages" class="text-pages" hidden>
+            <button id="text-previous" type="button" class="button secondary" aria-label="Vorherige Textseite"><span data-measure="line">Zurück</span></button>
+          <span id="text-page-count" data-measure="multi"></span>
+            <button id="text-next" type="button" class="button secondary" aria-label="Nächste Textseite"><span data-measure="line">Weiter</span></button>
+          </div>
+          <p id="excuse-help" class="muted" data-measure="multi">Eigene Ausrede eingeben oder eine vorbereitete auswählen.</p>
+        </section>
+      </div>
+      <div id="form-pages" class="form-pages" hidden>
+        <button id="previous" type="button" class="button secondary"><span data-measure="line">Zurück</span></button>
+        <span id="form-page-count" data-measure="multi">1 von 2</span>
+        <button id="next" type="button" class="button secondary"><span data-measure="line">Weiter</span></button>
+      </div>
+      <div class="status-region" aria-live="polite" aria-atomic="true">
+        <p id="status" data-measure="multi">Die Durchsage wird auf Ihrem Gerät erstellt.</p>
+        <progress id="progress" max="1" value="0" hidden aria-label="Fortschritt"></progress>
+      </div>
+      <div class="actions">
+        <p id="download-note" class="muted" data-measure="multi">Beim ersten Mal wird die Stimme geladen. Der Browser kann sie zwischenspeichern.</p>
+        <button id="route-back" type="button" class="button secondary" hidden aria-label="Verbindung bearbeiten"><span data-measure="line">Zurück</span></button>
+        <button id="cancel" type="button" class="button secondary" hidden><span data-measure="line">Abbrechen</span></button>
+        <button id="generate" type="submit" class="button primary"><span data-measure="multi">Durchsage erstellen</span><span aria-hidden="true">→</span></button>
+      </div>
+    </form>
+    <section id="result" aria-label="Erstellte Durchsage" hidden>
+      <div class="result-header">
+        <h2 data-measure="multi">Ihre Durchsage</h2>
+        <p id="duration" class="muted" data-measure="line"></p>
+      </div>
+      <p id="announcement" data-measure="multi"></p>
+      <div id="result-pages" class="text-pages" hidden>
+        <button id="result-previous" type="button" class="button secondary"><span data-measure="line">Zurück</span></button>
+        <span id="result-page-count" data-measure="multi"></span>
+        <button id="result-next" type="button" class="button secondary"><span data-measure="line">Weiter</span></button>
+      </div>
+      <audio id="player" controls preload="metadata"></audio>
+      <div class="actions">
+        <button id="edit" type="button" class="button secondary"><span data-measure="line">Neue Durchsage</span></button>
+        <a id="download" class="button primary" download="durchsage.mp3"><span data-measure="line">MP3 herunterladen</span><span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+    <p id="no-fit" class="fit-notice" hidden data-measure="multi">Bitte das Fenster vergrößern oder ins Hochformat wechseln, um eine Durchsage zu erstellen.</p>
+  </main>
+  <footer><span data-measure="multi">* Keine echten Reiseinformationen. Keine Verbindung zur Deutschen Bahn. <a href="./licenses/NOTICE.txt">Lizenzen</a></span></footer>
+</body>
+</html>

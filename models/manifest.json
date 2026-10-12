@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "precision": "int4",
+  "language": "de",
+  "sampleRate": 24000,
+  "frameRate": 25,
+  "codebooks": 8,
+  "maskId": 1024,
+  "modelBytes": 469057874,
+  "assets": {
+    "embeddings": {
+      "bytes": 2363,
+      "sha256": "f21daf4ee076c841d210b8941063a057c6e36d2bc04f4405daefa15b82c05563",
+      "logicalName": "audio_embeddings_encoder.onnx",
+      "shards": [
+        {
+          "url": "audio_embeddings_encoder.onnx",
+          "bytes": 2363,
+          "sha256": "f21daf4ee076c841d210b8941063a057c6e36d2bc04f4405daefa15b82c05563"
+        }
+      ],
+      "source": {
+        "repository": "onnx-community/OmniVoice-Onnx",
+        "revision": "a7be7c65cc118137683f49eff0f80fdf9d5b5dbf",
+        "filename": "int4/audio_embeddings_encoder.onnx"
+      }
+    },
+    "embeddingsData": {
+      "bytes": 87160832,
+      "sha256": "f6ed8d313fa5f6d2d33f3ad0af077dd1ba6d607f2a573cb389f28eec53f84393",
+      "logicalName": "audio_embeddings_encoder.onnx.data",
+      "shards": [
+        {
+          "url": "audio_embeddings_encoder.onnx.data.part-1.bin",
+          "bytes": 50331648,
+          "sha256": "475aaa8ceb12b7941d5717a1d034d16a3decf30a823803d2f7d4957e59c47276"
+        },
+        {
+          "url": "audio_embeddings_encoder.onnx.data.part-2.bin",
+          "bytes": 36829184,
+          "sha256": "c730ffd124c25dd120cb4788f75d7597794fd3ed878496ca8a5dcf548ccae5a5"
+        }
+      ],
+      "source": {
+        "repository": "onnx-community/OmniVoice-Onnx",
+        "revision": "a7be7c65cc118137683f49eff0f80fdf9d5b5dbf",
+        "filename": "int4/audio_embeddings_encoder.onnx.data"
+      }
+    },
+    "heads": {
+      "bytes": 4462676,
+      "sha256": "389f2133371f7f0bd678aba8cf1eac102ee4b227d3372f49bd181c591b890360",
+      "logicalName": "audio_heads_decoder.onnx",
+      "shards": [
+        {
+          "url": "audio_heads_decoder.onnx",
+          "bytes": 4462676,
+          "sha256": "389f2133371f7f0bd678aba8cf1eac102ee4b227d3372f49bd181c591b890360"
+        }
+      ],
+      "source": {
+        "repository": "onnx-community/OmniVoice-Onnx",
+        "revision": "a7be7c65cc118137683f49eff0f80fdf9d5b5dbf",
+        "filename": "int4/audio_heads_decoder.onnx"
+      }
+    },
+    "backbone": {
+      "bytes": 4022710,
+      "sha256": "9180a1e2b41b0433919f9d1775e97c18320033b3a6c865845eeceec168dd0863",
+      "logicalName": "llm_decoder_int4.onnx",
+      "shards": [
+        {
+          "url": "llm_decoder_int4.onnx",
+          "bytes": 4022710,
+          "sha256": "9180a1e2b41b0433919f9d1775e97c18320033b3a6c865845eeceec168dd0863"
+        }
+      ],
+      "source": {
+        "repository": "PranavBoi/omnivoice-web",
+        "revision": "53e33f3b219c28604297635640631f9457bcce14",
+        "filename": "llm_decoder_int4.onnx"
+      }
+    },
+    "backboneData": {
+      "bytes": 275484672,
+      "sha256": "a7d26bc998f295e11fdfd670d95f6c9de872c88c0e717086c9a846185ad2d0e8",
+      "logicalName": "llm_decoder_int4.onnx.data",
+      "shards": [
+        {
+          "url": "llm_decoder_int4.onnx.data.part-1.bin",
+          "bytes": 50331648,
+          "sha256": "e6d261f60040a455c7c0709172b8e11927ecc177da40a0cbc596841b0dda5ce5"
+        },
+        {
+          "url": "llm_decoder_int4.onnx.data.part-2.bin",
+          "bytes": 50331648,
+          "sha256": "2c58c521a587a1f5e429bdbae0d2fd1617ed923c20ff18ea312d92bf51e9d021"
+        },
+        {
+          "url": "llm_decoder_int4.onnx.data.part-3.bin",
+          "bytes": 50331648,
+          "sha256": "ab432093bd0b7eec8f1cc8b2f54d9be3ae5ea27e36139ecc4e92e909a0676727"
+        },
+        {
+          "url": "llm_decoder_int4.onnx.data.part-4.bin",
+          "bytes": 50331648,
+          "sha256": "6193af1cccf99cc9260576c94de330879cc11039f05e6385922d0b5ab2a64d5e"
+        },
+        {
+          "url": "llm_decoder_int4.onnx.data.part-5.bin",
+          "bytes": 50331648,
+          "sha256": "524f39f6532f1a687d28bb8ad73d44062408cee5287d816411fbd7682ecd9e0f"
+        },
+        {
+          "url": "llm_decoder_int4.onnx.data.part-6.bin",
+          "bytes": 23826432,
+          "sha256": "9d4b43ead6bb62d8e3578240bf330e78b64f742ecfdbcbb1e22035f83b6601e7"
+        }
+      ],
+      "source": {
+        "repository": "PranavBoi/omnivoice-web",
+        "revision": "53e33f3b219c28604297635640631f9457bcce14",
+        "filename": "llm_decoder_int4.onnx.data"
+      }
+    },
+    "decoder": {
+      "bytes": 86500102,
+      "sha256": "b28b3317a6cbf0d0f4a71b476ecb5c767612a31702da6561154783c94b6fa806",
+      "logicalName": "higgs_decoder.onnx",
+      "shards": [
+        {
+          "url": "higgs_decoder.onnx.part-1.bin",
+          "bytes": 50331648,
+          "sha256": "7fd870da7c8b09e760da75269a38bfd4f828803865faa48588aac49f13a89779"
+        },
+        {
+          "url": "higgs_decoder.onnx.part-2.bin",
+          "bytes": 36168454,
+          "sha256": "51e44590d72d9062810db069169f76d09f23638d02d7c1311eb6fd57bf688fb1"
+        }
+      ],
+      "source": {
+        "repository": "onnx-community/OmniVoice-Onnx",
+        "revision": "a7be7c65cc118137683f49eff0f80fdf9d5b5dbf",
+        "filename": "audio_tokenizer/higgs_decoder.onnx"
+      }
+    },
+    "tokenizer": {
+      "bytes": 11423986,
+      "sha256": "408f669b7e2b045fdf54201d815bd364e6667dbd845115da81239c40bc6dcfd1",
+      "logicalName": "tokenizer.json",
+      "shards": [
+        {
+          "url": "tokenizer.json",
+          "bytes": 11423986,
+          "sha256": "408f669b7e2b045fdf54201d815bd364e6667dbd845115da81239c40bc6dcfd1"
+        }
+      ],
+      "source": {
+        "repository": "onnx-community/OmniVoice-Onnx",
+        "revision": "a7be7c65cc118137683f49eff0f80fdf9d5b5dbf",
+        "filename": "int4/tokenizer.json"
+      }
+    },
+    "tokenizerConfig": {
+      "bytes": 533,
+      "sha256": "49f78845596a82bf15c83673794bdf9f76f812b11f60ab6a2239d9be65b00676",
+      "logicalName": "tokenizer_config.json",
+      "shards": [
+        {
+          "url": "tokenizer_config.json",
+          "bytes": 533,
+          "sha256": "49f78845596a82bf15c83673794bdf9f76f812b11f60ab6a2239d9be65b00676"
+        }
+      ],
+      "source": {
+        "repository": "onnx-community/OmniVoice-Onnx",
+        "revision": "a7be7c65cc118137683f49eff0f80fdf9d5b5dbf",
+        "filename": "int4/tokenizer_config.json"
+      }
+    }
+  }
+}
